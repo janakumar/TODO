@@ -14,7 +14,6 @@ const Todo = () => {
   const[success,setSuccess]=useState("")
 
 
-
   const submit = () => {
     if (title.trim() !== '' && description.trim() !== '') {
       fetch("http://localhost:3500/todos", {
@@ -32,10 +31,6 @@ const Todo = () => {
             setError("Unable to add item");
           }
         })
-        .catch((err) => {
-          console.error("Error:", err);
-          setError("Failed to connect to server");
-        });
     }
   };
   
